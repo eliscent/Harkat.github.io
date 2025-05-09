@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+label {
+    display: inline-block;
+    width: 150px; 
+    font-size: 18px; 
+}
+
+input[type="text"] {
+    width: 200px;
+    background-color: #fff8b3;
+    border: 2px solid #ffd966;
+    margin-bottom: 10px;
+    font-size: 18px; 
+    padding: 8px; 
+    border-radius: 6px;
+}
+
+p {
+    margin: 15px 0; 
+    font-size: 18px; 
+}
+
+body {
+    background-color: rgb(179, 221, 235);
+    font-family: 'Poppins', sans-serif;
+    margin: 20px; 
+    padding: 10px; 
+}
+
+h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 55px;
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 0 #fff176;
+}
+
+.verbienlisays {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+form {
+    flex: 1 1 50%;
+    padding-left: 30px;
+}
+
+.verbiesimerkit {
+    max-width: 300px; 
+    text-align: center;
+    margin-left: 0;
+}
+
+.verbiesimerkit img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    margin-top: 0; 
+    font-size: 20px; 
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 18px; 
+    padding: 10px 20px; 
+}
+
+#sentences {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.lauseosio {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 30px;
+}

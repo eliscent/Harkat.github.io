@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="projektiryhmaetyyli.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <title>Verbikone</title>
+</head>
+
+<body>
+
+    <h1>Verbikone</h1>
+
+    <div class="verbienlisays">
+        <form>
+            <h2>Syötä 10 englanninkielistä verbiä</h2>
+            <p>
+                <label>Verbi 1</label> <input type="text" id="verbi1" size="10"><br>
+                <label>Verbi 2</label> <input type="text" id="verbi2" size="10"><br>
+                <label>Verbi 3</label> <input type="text" id="verbi3" size="10"><br>
+                <label>Verbi 4</label> <input type="text" id="verbi4" size="10"><br>
+                <label>Verbi 5</label> <input type="text" id="verbi5" size="10"><br>
+                <label>Verbi 6</label> <input type="text" id="verbi6" size="10"><br>
+                <label>Verbi 7</label> <input type="text" id="verbi7" size="10"><br>
+                <label>Verbi 8</label> <input type="text" id="verbi8" size="10"><br>
+                <label>Verbi 9</label> <input type="text" id="verbi9" size="10"><br>
+                <label>Verbi 10</label> <input type="text" id="verbi10" size="10"><br>
+            </p>
+            <button type="button" onclick="tarkistaVerbit()">Tarkista verbit</button>
+            <p id="message"></p>
+        </form>
+
+        <div class="verbiesimerkit">
+            <p>Valitse laatikon verbeistä, mitkä verbit haluat kirjoittaa enkuksi!</p>
+            <img src="verbit.png" alt="Esimerkkiverbit">
+        </div>
+    </div>
+
+    <div class="lauseosio">
+        <h3>Kunhan verbit on syötetty, näet alla, miten verbejä voisi käyttää lauseissa!</h3>
+        <div id="sentences"></div>
+    </div>
+
+    <script src="projektiryhmae.js"></script>
+</body>
+
+</html>
