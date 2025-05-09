@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yhteenlaskutesti</title>
+  <style>
+    /* Yleiset tyylit sivulle: elementtien erotteluun ollaan lisätty väliä että ne eivät ole toistensa päällä. Määritettiin fontti */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 15px; 
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px; 
+    }
+
+    button {
+      margin-top: 10px; 
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Yhteenlaskutesti</h1>
+
+  
+  <div id="quiz"></div>
+
+  <!-- Nappula millä lähetetään vastaukset ja painamalla toista nappia testin voi tehdä uusiksi -->
+  <button onclick="submitAnswers()">Lähetä vastaukset</button>
+  <button onclick="location.reload()">Uusi testi</button>
+
+  <!-- Tänne näytetään lopputulos kautta kuinka monta 10:stä sait oikein -->
+  <div id="result" class="result"></div>
+
+  <script>
+    const numQuestions = 10;  // Kysymysten määrä
+    const questions = [];     // Tallennetaan jokainen kysymys tähän taulukkoon
+
+    // Palauttaa satunnaisen kokonaisluvun väliltä min, max mathrandpmilla.
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Luo kysymykset ja lisää ne sivulle
+    function createQuiz() {
+      const quizContainer = document.getElementById("quiz");
+      quizContainer.innerHTML = ""; // Tyhjennetään edellinen sisältö ja arpoo uudet laskettavat luvut testiin jotta testin voi tehdä uudestaan
+
+      for (let i = 0; i < numQuestions; i++) {
+        const a = getRandomInt(1, 100); // Ensimmäinen luku arpoo 1-100
+        const b = getRandomInt(1, 100); // Toinen luku arpoo 1-100
+
+        // Tallennetaan tiedot taulukkoon suoraan indeksillä
+        questions[i] = {
+          a: a,
+          b: b,
+          answer: a + b
+        };
+
+        // Luodaan käyttäjälle kysymykset
+        const div = document.createElement("div");
+        div.className = "question";
+        div.innerHTML = `
+          ${i + 1}. Mikä on ${a} + ${b}?
+          <input type="number" id="answer-${i}" />
+        `;
+
+        quizContainer.appendChild(div); 
+      }
+    }
+
+    // Tarkistetaan käyttäjän vastaukset
+    function submitAnswers() {
+      let correct = 0; // Lasketaan oikeiden vastausten määrä niitä voi olla maksimissaan kymmenen
+
+      for (let i = 0; i < numQuestions; i++) {
+        const input = document.getElementById(`answer-${i}`);
+        const userAnswer = parseInt(input.value, 10);
+
+        // Tarkistetaan, onko vastaus oikein 
+        if (userAnswer === questions[i].answer) {
+          correct++;
+        }
+      }
+
+      // Näytetään lopputulos
+      document.getElementById("result").textContent = `Sait ${correct} / ${numQuestions} oikein.`;
+    }
+
+    // Kun sivu latautuu, luodaan heti kysymykset
+    createQuiz();
+  </script>
+<!--Lähteet: W3schools, Viope, kurssidiat, debuggaukseen käytettiin tekoälyä-->
+</body>
+</html>
+    

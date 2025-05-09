@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adjektiivilauseet</title>
+
+  <!--Tyylit-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      
+    }
+    
+    input {
+      margin-bottom: 5px;
+      display: block;
+    }
+    button {
+      margin-top: 10px;
+    }
+    .results {
+      margin-top: 20px;
+    }
+  </style>
+  
+  <!--Script-->
+  <script defer src="javascriptV3.js"></script>
+</head>
+
+<!--Runko-->
+<body>
+
+  <h2>Anna 10 englanninkielistä adjektiivia</h2>
+
+  <h3>Täydennä lauseet adjektiiveilla:</h3>
+  <ol id="exampleSentences"></ol>
+
+  <div id="inputs"></div>
+
+  <button onclick="generateSentences()">Luo lauseet</button>
+
+  <div class="results" id="results"></div>
+</body>
+</html>

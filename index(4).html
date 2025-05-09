@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kertolasku</title>
+    <style>
+        /* Yleiset tyylit sivulle */
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          max-width: 400px;
+          margin: auto;
+        }
+        /* Syötekenttien ja painikkeiden ulkoasu */
+        input, button {
+          margin-top: 10px;
+          padding: 8px;
+          width: 100%;
+          font-size: 16px;
+        }
+      </style>
+</head>
+<body>
+
+    <h2>Kertotauluharjoitus</h2>
+
+    <!-- Alkuvalikko -->
+  <div id="start">
+    <label for="luku">Minkä luvun kertotaulua haluat harjoitella? (1-10)</label>
+    <input type="number" id="luku">
+    <button onclick="aloitaHarjoitus()">Aloita</button>
+  </div>
+
+  <!-- Kysymysalue -->
+  <div id="kysymysalue" style="display:none;">
+    <p id="kysymys"></p>
+    <input type="number" id="vastaus">
+    <button onclick="tarkistaVastaus()">Seuraava</button>
+  </div>
+
+  <!-- Tulosalue -->
+  <div id="tulos" style="display:none;"></div>
+
+  <script>
+    // Muuttujat harjoituksessa käytettävälle luvulle, kertoimelle ja oikeiden vastausten laskurille
+    let luku = 0;
+    let kerroin = 1;
+    let oikeat = 0;
+
+    // Funktio, joka käynnistää harjoituksen
+    function aloitaHarjoitus() {
+        luku = document.getElementById("luku").value;
+
+        // Tarkistetaan, että syötetty arvo on kokonaisluku väliltä 1-10
+        if (luku === "" || luku < 1 || luku > 10 || parseInt(luku) != parseFloat(luku)) {
+    alert("Syötä positiivinen kokonaisluku väliltä 1-10.");
+    return;
+  }
+
+  luku = parseInt(luku); // Muutetaan merkkijono kokonaisluvuksi
+
+  // Näytetään kysymysalue ja piilotetaan aloitusvalikko
+  document.getElementById("start").style.display = "none";
+  document.getElementById("kysymysalue").style.display = "block";
+
+  // Näytetään ensimmäinen kysymys
+  naytaKysymys();
+}
+
+// Funktio näyttää seuraavan kertolaskun
+function naytaKysymys() {
+    document.getElementById("kysymys").textContent = kerroin + " x " + luku + " = ?";
+    document.getElementById("vastaus").value = ""; // Tyhjennetään vastauskenttä
+    document.getElementById("vastaus").focus(); // Siirretään kursori vastauskenttään, jotta on helppo jatkaa
+}
+
+// Funktio tarkistaa vastauksen ja siirtyy seuraavaan kysymykseen tai tuloksiin
+function tarkistaVastaus() {
+    const vastaus = parseInt(document.getElementById("vastaus").value);
+
+    // Tarkistetaan, onko vastaus oikein
+      if (vastaus === kerroin * luku) {
+        oikeat++; // Lisätään piste oikeasta vastauksesta
+      }
+
+      kerroin++; // Siirrytään seuraavaan kertolaskuun
+
+      if (kerroin > 10) {
+        // Jos kaikki 10 kysymystä on esitetty, näytetään tulos
+        naytaTulos();
+      } else {
+        // Muuten jatkeaan seuraavaan kysymykseen
+        naytaKysymys();
+      }
+    }
+
+    // Funktio näyttää lopputuloksen
+    function naytaTulos() {
+        document.getElementById("kysymysalue").style.display = "none"; // Piilotetaan kysymysalue
+        const tulos = "Oppiminen on tärkeintä! " + "Sait " + oikeat + " / 10 oikein."; // Luodaan tulosteksti
+        document.getElementById("tulos").textContent = tulos; // Aseteaan tulosteksti
+        document.getElementById("tulos").style.display = "block"; // Näytetään tulosalue
+    }
+  </script>
+</body>
+</html>
