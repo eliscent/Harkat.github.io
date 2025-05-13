@@ -135,3 +135,8 @@ h1 {
    border-style:solid;
    text-align: center;
 }
+.card-body2 {
+   border-style:double;
+   border-color: #7d5391;
+   border-width: 2px;
+}
