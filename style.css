@@ -26,3 +26,41 @@ nav a:hover {
 main {
     padding: 40px;
 }
+
+select, button {
+    padding: 5px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*adjektiivit style*/
+    input {
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .results {
+      margin-top: 20px;
+    }
+
+/*sää style*/
+#result {
+      font-size: 24px;
+      margin-top: 20px;
+}
+
+#emoji {
+      font-size: 80px;
+      margin-bottom: 10px;
+}
+
+/*yhteenlasku style*/
+.question {
+  margin-bottom: 15px; 
+}
+
+.result {
+  font-weight: bold;
+  margin-top: 20px; 
+}
