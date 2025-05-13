@@ -1,79 +1,140 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
 }
 
 nav {
-    background-color: #7d5391;
-    color: white;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
+   background-color: #7d5391;
+   color: white;
+   padding: 10px 20px;
+   position: sticky;
+   top: 0;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    font-weight: bold;
+   color: white;
+   text-decoration: none;
+   margin-right: 20px;
+   font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+   text-decoration: underline;
 }
 
 main {
-    padding: 40px;
+   padding: 40px;
 }
 
-select, button {
-    padding: 5px;
-    margin: 5px;
-    font-size: 16px;
-    cursor: pointer;
+select,
+button {
+   padding: 5px;
+   margin: 5px;
+   font-size: 16px;
+   cursor: pointer;
 }
 
 /*adjektiivit style*/
 #inputs input {
-    display: block;
-      margin-bottom: 5px;
+   display: block;
+   margin-bottom: 5px;
 }
 
 .results {
-    margin-top: 20px;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+   margin-top: 20px;
+   padding: 1rem;
+   background-color: #f8f9fa;
+   border-radius: 0.5rem;
+   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 /*kaupungit style */
 #vastaus {
-  font-weight: 500;
+   font-weight: 500;
 }
 
 #paakaupunki {
-  max-width: 400px;
+   max-width: 400px;
+}
+
+/*kertolaskut2 style */
+h1 {
+   text-align: center;
+   margin: 2rem 0;
+}
+
+.task-box {
+   background: #ffffff;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+   padding: 2rem;
+   max-width: 600px;
+   margin: 0 auto 2rem auto;
+}
+
+.task-item {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+}
+
+.task-item label {
+   flex: 1;
+   font-size: 1.2rem;
+}
+
+.task-item input {
+   width: 100px;
+}
+
+.btn-group {
+   text-align: center;
+   margin-bottom: 1.5rem;
+}
+
+#result {
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.2rem;
+   color: #2c3e50;
+}
+
+/*laskut style */
+.task-container {
+   background: #ffffff;
+   padding: 2rem;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+   max-width: 600px;
+   margin: 2rem auto;
+   text-align: center;
+}
+
+#answer {
+   margin-top: 1.5rem;
+   font-size: 1.3rem;
+   font-weight: 500;
+   color: #333;
 }
 
 /*sää style*/
 #result {
-      font-size: 24px;
-      margin-top: 20px;
+   font-size: 24px;
+   margin-top: 20px;
 }
 
 #emoji {
-      font-size: 80px;
-      margin-bottom: 10px;
+   font-size: 80px;
+   margin-bottom: 10px;
 }
 
 /*yhteenlasku style*/
 .question {
-  margin-bottom: 15px; 
+   margin-bottom: 15px;
 }
 
 .result {
-  font-weight: bold;
-  margin-top: 20px; 
+   font-weight: bold;
+   margin-top: 20px;
 }
