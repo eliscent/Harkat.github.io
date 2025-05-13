@@ -126,13 +126,3 @@ h1 {
 #emoji {
    font-size: 80px;
 }
-
-/*yhteenlasku style*/
-.question {
-   margin-bottom: 15px;
-}
-
-.result {
-   font-weight: bold;
-   margin-top: 20px;
-}
