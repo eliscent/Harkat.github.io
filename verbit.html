@@ -39,37 +39,39 @@
          </div>
       </nav>
       
-      <div class="col-md-6 d-flex align-items-start justify-content-center">
-        <div class="verbiesimerkit text-center">
-          <p class="fw-bold">Valitse laatikon verbeistä, mitkä verbit haluat kirjoittaa enkuksi!</p>
-          <img src="verbit.png" alt="Esimerkkiverbit" class="img-fluid rounded shadow" style="max-width: 100%;">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-6">
-<form class="bg-white p-4 rounded shadow">
-  <h2 class="mb-4">Syötä 10 englanninkielistä verbiä</h2>
-  <div class="row gy-2">
-    <div class="col-12"><input type="text" id="verbi1" class="form-control" placeholder="Verbi 1"></div>
-    <div class="col-12"><input type="text" id="verbi2" class="form-control" placeholder="Verbi 2"></div>
-    <div class="col-12"><input type="text" id="verbi3" class="form-control" placeholder="Verbi 3"></div>
-    <div class="col-12"><input type="text" id="verbi4" class="form-control" placeholder="Verbi 4"></div>
-    <div class="col-12"><input type="text" id="verbi5" class="form-control" placeholder="Verbi 5"></div>
-    <div class="col-12"><input type="text" id="verbi6" class="form-control" placeholder="Verbi 6"></div>
-    <div class="col-12"><input type="text" id="verbi7" class="form-control" placeholder="Verbi 7"></div>
-    <div class="col-12"><input type="text" id="verbi8" class="form-control" placeholder="Verbi 8"></div>
-    <div class="col-12"><input type="text" id="verbi9" class="form-control" placeholder="Verbi 9"></div>
-    <div class="col-12"><input type="text" id="verbi10" class="form-control" placeholder="Verbi 10"></div>
-  </div>
+    <!-- Isossa näytössä oikeella, mobiilissa ylhäällä -->
+    <div class="col-md-6 order-1 order-md-2 d-flex align-items-start justify-content-center mb-4 mb-md-0">
+      <div class="verbiesimerkit text-center">
+        <p class="fw-bold">Valitse laatikon verbeistä, mitkä verbit haluat kirjoittaa enkuksi!</p>
+        <img src="verbit.png" alt="Esimerkkiverbit" class="img-fluid rounded shadow" style="max-width: 100%;">
+      </div>
+    </div>
 
-  <button type="button" class="btn btn-success mt-3" onclick="tarkistaVerbit()">Tarkista verbit</button>
-  <p id="message" class="mt-2 fw-bold text-success"></p>
-</form>
+    <div class="col-md-6 order-2 order-md-1">
+      <form class="bg-white p-4 rounded shadow">
+        <h2 class="mb-4">Syötä 10 englanninkielistä verbiä</h2>
+        <div class="row">
+          <div class="col-12"><input type="text" id="verbi1" class="form-control" placeholder="Verbi 1"></div>
+          <div class="col-12"><input type="text" id="verbi2" class="form-control" placeholder="Verbi 2"></div>
+          <div class="col-12"><input type="text" id="verbi3" class="form-control" placeholder="Verbi 3"></div>
+          <div class="col-12"><input type="text" id="verbi4" class="form-control" placeholder="Verbi 4"></div>
+          <div class="col-12"><input type="text" id="verbi5" class="form-control" placeholder="Verbi 5"></div>
+          <div class="col-12"><input type="text" id="verbi6" class="form-control" placeholder="Verbi 6"></div>
+          <div class="col-12"><input type="text" id="verbi7" class="form-control" placeholder="Verbi 7"></div>
+          <div class="col-12"><input type="text" id="verbi8" class="form-control" placeholder="Verbi 8"></div>
+          <div class="col-12"><input type="text" id="verbi9" class="form-control" placeholder="Verbi 9"></div>
+          <div class="col-12"><input type="text" id="verbi10" class="form-control" placeholder="Verbi 10"></div>
+        </div>
+        <button type="button" class="btn btn-success mt-3" onclick="tarkistaVerbit()">Tarkista verbit</button>
+        <p id="message" class="mt-2 fw-bold text-success"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
 
 
     </div>
