@@ -18,49 +18,33 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Valikko">
                <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-               <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                     <a class="nav-link" href="index.html">Etusivu</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="adjektiivit.html">Adjektiivit</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="verbit.html">Verbit</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="kaupungit.html">Kaupungit</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="kertolaskut.html">Kertolaskut</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="kertolaskut2.html">Kertolaskut 2</a>
-                </li>
-                    <li class="nav-item">
-                     <a class="nav-link" href="laskut.html">Laskut</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="Yhteenlasku.html">Yhteenlaskut</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="weather.html">Sää</a>
-                </li>
-               </ul>
-            </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
+          <li class="nav-item"><a class="nav-link" href="adjektiivit.html">Adjektiivit</a></li>
+          <li class="nav-item"><a class="nav-link" href="verbit.html">Verbit</a></li>
+          <li class="nav-item"><a class="nav-link" href="kaupungit.html">Kaupungit</a></li>
+          <li class="nav-item"><a class="nav-link" href="kertolaskut.html">Kertolaskut</a></li>
+          <li class="nav-item"><a class="nav-link" href="kertolaskut2.html">Kertolaskut 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="laskut.html">Laskut</a></li>
+          <li class="nav-item"><a class="nav-link" href="Yhteenlasku.html">Yhteenlaskut</a></li>
+          <li class="nav-item"><a class="nav-link" href="weather.html">Sää</a></li>
+        </ul>
+      </div>
          </div>
       </nav>
 
-  <h2>Anna 10 englanninkielistä adjektiivia</h2>
+  <div class="container my-5">
+    <h2 class="mb-4">Anna 10 englanninkielistä adjektiivia</h2>
 
-  <h3>Täydennä lauseet adjektiiveilla:</h3>
-  <ol id="exampleSentences"></ol>
+    <div class="mb-5">
+      <h4 class="mb-3">Täydennä lauseet adjektiiveilla:</h4>
+      <ol id="exampleSentences" class="list-group list-group-numbered mb-4"></ol>
+      <div id="inputs" class="mb-3"></div>
+      <button class="btn btn-success" onclick="generateSentences()">Luo lauseet</button>
+    </div>
 
-  <div id="inputs"></div>
-
-  <button onclick="generateSentences()">Luo lauseet</button>
-
-  <div class="results" id="results"></div>
+    <div class="results mt-5" id="results"></div>
+  </div>
 </body>
 </html>
