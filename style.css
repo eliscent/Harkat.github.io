@@ -127,6 +127,10 @@ h1 {
    font-size: 80px;
 }
 
+.col-md-6 {
+   text-align: center;
+}
+
 /*etusivu style*/
 
 .card-body {
