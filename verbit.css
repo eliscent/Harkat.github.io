@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+input[type="text"] {
+    background-color: #fff8b3;
+    border: 2px solid #ffd966;
+    margin-bottom: 10px;
+    font-size: 18px; 
+    padding: 8px; 
+}
+
+p {
+    font-size: 18px; 
+}
+
+h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 55px;
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 0 #fff176;
+}
+
+.verbiesimerkit {
+    max-width: 300px; 
+    text-align: center;
+    margin-left: 0;
+}
+
+#sentences {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.lauseosio {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
