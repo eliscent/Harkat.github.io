@@ -126,3 +126,12 @@ h1 {
 #emoji {
    font-size: 80px;
 }
+
+/*etusivu style*/
+
+.card-body {
+   border-color: #7d5391;
+   border-width: 6px;
+   border-style:solid;
+   text-align: center;
+}
