@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html lang="fi">
-<head>
-  <meta charset="UTF-8" />
-  <title>Yhteenlaskutesti</title>
-  <link rel="stylesheet" href="style.css" />
+   <head>
+      <meta charset="UTF-8" />
+      <title>Yhteenlaskutesti</title>
+      <link rel="stylesheet" href="style.css" />
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-</head>
-<body>
-  <nav class="navbar navbar-dark sticky-top">
+   </head>
+   <body>
+      <nav class="navbar navbar-dark sticky-top">
          <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Harjoitustehtävät</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Valikko">
                <span class="navbar-toggler-icon"></span>
             </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
-          <li class="nav-item"><a class="nav-link" href="adjektiivit.html">Adjektiivit</a></li>
-          <li class="nav-item"><a class="nav-link" href="verbit.html">Verbit</a></li>
-          <li class="nav-item"><a class="nav-link" href="kaupungit.html">Kaupungit</a></li>
-          <li class="nav-item"><a class="nav-link" href="kertolaskut.html">Kertolaskut</a></li>
-          <li class="nav-item"><a class="nav-link" href="kertolaskut2.html">Kertolaskut 2</a></li>
-          <li class="nav-item"><a class="nav-link" href="laskut.html">Laskut</a></li>
-          <li class="nav-item"><a class="nav-link" href="Yhteenlasku.html">Yhteenlaskut</a></li>
-          <li class="nav-item"><a class="nav-link" href="weather.html">Sää</a></li>
-        </ul>
-      </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Etusivu</a></li>
+                  <li class="nav-item"><a class="nav-link" href="adjektiivit.html">Adjektiivit</a></li>
+                  <li class="nav-item"><a class="nav-link" href="verbit.html">Verbit</a></li>
+                  <li class="nav-item"><a class="nav-link" href="kaupungit.html">Kaupungit</a></li>
+                  <li class="nav-item"><a class="nav-link" href="kertolaskut.html">Kertolaskut</a></li>
+                  <li class="nav-item"><a class="nav-link" href="kertolaskut2.html">Kertolaskut 2</a></li>
+                  <li class="nav-item"><a class="nav-link" href="laskut.html">Laskut</a></li>
+                  <li class="nav-item"><a class="nav-link" href="Yhteenlasku.html">Yhteenlaskut</a></li>
+                  <li class="nav-item"><a class="nav-link" href="weather.html">Sää</a></li>
+               </ul>
+            </div>
          </div>
       </nav>
 
-  <h1>Yhteenlaskutesti</h1>
+      <div class="container mt-5">
+         <h1 class="text-center mb-4">Yhteenlaskutesti</h1>
 
-  
-  <div id="quiz"></div>
+         <div id="quiz"></div>
 
-  <!-- Nappula millä lähetetään vastaukset ja painamalla toista nappia testin voi tehdä uusiksi -->
-  <button onclick="submitAnswers()">Lähetä vastaukset</button>
-  <button onclick="location.reload()">Uusi testi</button>
+         <!-- Buttons -->
+         <div class="text-center mt-4">
+            <button onclick="submitAnswers()" class="btn btn-primary mx-2">Lähetä vastaukset</button>
+            <button onclick="location.reload()" class="btn btn-secondary mx-2">Uusi testi</button>
+         </div>
 
-  <!-- Tänne näytetään lopputulos kautta kuinka monta 10:stä sait oikein -->
-  <div id="result" class="result"></div>
+         <!-- Result Section -->
+         <div id="result" class="result mt-4 text-center"></div>
+      </div>
 
-  <script>
-    const numQuestions = 10;  // Kysymysten määrä
-    const questions = [];     // Tallennetaan jokainen kysymys tähän taulukkoon
+      <script>
+         const numQuestions = 10; // Kysymysten määrä
+         const questions = []; // Tallennetaan jokainen kysymys tähän taulukkoon
 
-    // Palauttaa satunnaisen kokonaisluvun väliltä min, max mathrandpmilla.
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+         function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+         }
 
-    // Luo kysymykset ja lisää ne sivulle
-    function createQuiz() {
-      const quizContainer = document.getElementById("quiz");
-      quizContainer.innerHTML = ""; // Tyhjennetään edellinen sisältö ja arpoo uudet laskettavat luvut testiin jotta testin voi tehdä uudestaan
+         function createQuiz() {
+            const quizContainer = document.getElementById("quiz");
+            quizContainer.innerHTML = ""; // Clear the quiz container
 
-      for (let i = 0; i < numQuestions; i++) {
-        const a = getRandomInt(1, 100); // Ensimmäinen luku arpoo 1-100
-        const b = getRandomInt(1, 100); // Toinen luku arpoo 1-100
+            for (let i = 0; i < numQuestions; i++) {
+               const a = getRandomInt(1, 100);
+               const b = getRandomInt(1, 100);
 
-        // Tallennetaan tiedot taulukkoon suoraan indeksillä
-        questions[i] = {
-          a: a,
-          b: b,
-          answer: a + b
-        };
+               questions[i] = {
+                  a: a,
+                  b: b,
+                  answer: a + b,
+               };
 
-        // Luodaan käyttäjälle kysymykset
-        const div = document.createElement("div");
-        div.className = "question";
-        div.innerHTML = `
-          ${i + 1}. Mikä on ${a} + ${b}?
-          <input type="number" id="answer-${i}" />
+               // Create a new question
+               const div = document.createElement("div");
+               div.className = "question mb-3 p-3 border rounded";
+               div.innerHTML = `
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <label for="answer-${i}">
+                ${i + 1}. Mikä on ${a} + ${b}?
+              </label>
+            </div>
+            <div class="col-md-4">
+              <input type="number" id="answer-${i}" class="form-control mt-2" />
+            </div>
+          </div>
         `;
+               quizContainer.appendChild(div);
+            }
+         }
 
-        quizContainer.appendChild(div); 
-      }
-    }
+         function submitAnswers() {
+            let correct = 0;
 
-    // Tarkistetaan käyttäjän vastaukset
-    function submitAnswers() {
-      let correct = 0; // Lasketaan oikeiden vastausten määrä niitä voi olla maksimissaan kymmenen
+            for (let i = 0; i < numQuestions; i++) {
+               const input = document.getElementById(`answer-${i}`);
+               const userAnswer = parseInt(input.value, 10);
 
-      for (let i = 0; i < numQuestions; i++) {
-        const input = document.getElementById(`answer-${i}`);
-        const userAnswer = parseInt(input.value, 10);
+               if (userAnswer === questions[i].answer) {
+                  correct++;
+               }
+            }
 
-        // Tarkistetaan, onko vastaus oikein 
-        if (userAnswer === questions[i].answer) {
-          correct++;
-        }
-      }
+            document.getElementById("result").textContent = `Sait ${correct} / ${numQuestions} oikein.`;
+         }
 
-      // Näytetään lopputulos
-      document.getElementById("result").textContent = `Sait ${correct} / ${numQuestions} oikein.`;
-    }
+         createQuiz();
+      </script>
 
-    // Kun sivu latautuu, luodaan heti kysymykset
-    createQuiz();
-  </script>
-<!--Lähteet: W3schools, Viope, kurssidiat, debuggaukseen käytettiin tekoälyä-->
-</body>
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
 </html>
-    

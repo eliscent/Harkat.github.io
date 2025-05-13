@@ -121,20 +121,8 @@ h1 {
 /*sää style*/
 #result {
    font-size: 24px;
-   margin-top: 20px;
 }
 
 #emoji {
    font-size: 80px;
-   margin-bottom: 10px;
-}
-
-/*yhteenlasku style*/
-.question {
-   margin-bottom: 15px;
-}
-
-.result {
-   font-weight: bold;
-   margin-top: 20px;
 }
