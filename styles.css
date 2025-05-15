@@ -71,11 +71,14 @@ h1 {
   background-color: #e1eaff;
 }
 
-.otsikko {
-  font-size: 1.2rem;
-  font-weight: bold;
+.nav-category {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
 }
-
 
 /* Bootstrap navbar */
 .navbar-nav .nav-link {
