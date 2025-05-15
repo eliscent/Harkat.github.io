@@ -1,14 +1,16 @@
-/* General resets and font */
+/* General */
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #fffdf9;
   color: #333;
 }
 
+/* Header */
 header {
   background: linear-gradient(90deg, #6a82fb, #fc5c7d);
 }
 
+/* Headings */
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -21,7 +23,7 @@ h1 {
   color: #444;
 }
 
-/* Button styling */
+/* Button */
 .btn-category {
   font-size: 1.2rem;
   padding: 0.75rem;
@@ -29,6 +31,7 @@ h1 {
   font-weight: 600;
   color: white;
   border: none;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .btn-pink {
@@ -46,10 +49,9 @@ h1 {
 .btn-category:hover {
   filter: brightness(1.1);
   transform: scale(1.02);
-  transition: all 0.2s ease;
 }
 
-/* Navigation bar styles */
+/* Navigation */
 .custom-nav {
   background-color: #f2f6ff;
   border-bottom: 2px solid #dbe2ef;
@@ -62,36 +64,40 @@ h1 {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 .custom-nav .nav-link:hover {
   background-color: #e1eaff;
 }
 
+/* Bootstrap navbar */
 .navbar-nav .nav-link {
   font-weight: 600;
   padding: 0.5rem 1rem;
   color: white;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  text-decoration: underline;
   color: #ffe;
+  text-decoration: underline;
 }
 
+/* Navbar icon */
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* Weather heading */
 .weather {
   font-size: 2rem;
 }
 
-/* Responsive layout tweaks */
+/* Responsive layout */
 @media (min-width: 768px) {
   .d-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
