@@ -6,14 +6,12 @@ body {
 
 nav {
    background-color: #7d5391;
-   color: white;
    padding: 10px 20px;
    position: sticky;
    top: 0;
 }
 
 nav a {
-   color: white;
    text-decoration: none;
    margin-right: 20px;
    font-weight: bold;
@@ -34,6 +32,45 @@ button {
    font-size: 16px;
    cursor: pointer;
 }
+
+body {
+  font-family: 'Comic Neue', cursive;
+  background: #fffbe6;
+  color: #333;
+}
+
+.navbar {
+  background-color: #ffb703;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nav-link {
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.75rem;
+}
+
+.alert {
+  background-color: #c7d8fc;
+  border: 2px dashed #3b8b4b;
+  font-weight: bold;
+}
+
 
 /*adjektiivit style*/
 #inputs input {
