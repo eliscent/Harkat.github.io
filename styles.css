@@ -70,15 +70,16 @@ h1 {
 }
 
 .navbar-nav .nav-link {
-  color: white;
   font-weight: 600;
   padding: 0.5rem 1rem;
+  color: white;
 }
 
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
-  color: #ffd;
+  color: #ffe;
 }
+
 
 
 /* Responsive layout tweaks */
