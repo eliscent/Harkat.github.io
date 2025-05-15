@@ -71,6 +71,11 @@ h1 {
   background-color: #e1eaff;
 }
 
+.otsikko {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 /* Bootstrap navbar */
 .navbar-nav .nav-link {
   font-weight: 600;
