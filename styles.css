@@ -76,11 +76,6 @@ h1 {
   font-weight: bold;
 }
 
-.navbar-collapse {
-  width: 100% !important;
-  position: relative;
-  left: 0 !important;
-}
 
 /* Bootstrap navbar */
 .navbar-nav .nav-link {
